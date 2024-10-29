@@ -1,0 +1,68 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #28a745; /* Fondo verde */
+    color: #FFD700; /* Texto en amarillo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Título */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Botón dentro del contenedor */
+button {
+    background-color: #FFD700; /* Fondo amarillo */
+    color: #000000; /* Texto negro */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto de créditos */
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+button:hover {
+    background-color: #e0c700; /* Cambiar color en hover */
+}
+
+/* Estilos del botón de salir */
+#salir2Button {
+    position: absolute;
+    height: 90px;
+    top: 10px; /* Ajusta la distancia del botón salir desde arriba */
+    left: 20px; /* Ajusta la distancia desde la izquierda */
+    background-color: rgb(255, 242, 0);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+#salir2Button:hover {
+    background-color: darkred;
+}

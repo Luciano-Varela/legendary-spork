@@ -1,0 +1,238 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo general del body */
+body {
+    background-color: #87CEEB; /* Celeste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa del viewport */
+    margin: 0;
+    background-image: url("fondo.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el div */
+    background-position: center; /* Centra la imagen */
+    position: relative; /* Para el botón salir */
+}
+
+/* Estilo del contenedor del juego */
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilo del canvas */
+canvas {
+    border: none;
+    background: transparent;
+}
+
+/* Botón de salir */
+#salirButton {
+    position: absolute;
+    height: 40px;
+    top: 10px;
+    left: 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#salirButton:hover {
+    background-color: darkred;
+}
+
+/* Texto de NIVEL 1 */
+#nivel {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px; /* Aumentar el tamaño del texto */
+    color: black;
+    font-weight: bold;
+}
+
+/* Contenedor del pato */
+#contenedor {
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    text-align: center;
+    font-size: 24px; /* Aumentar el tamaño del texto de vida del pato */
+}
+
+/* Animación de la imagen del pato */
+.banner_img {
+    animation: movimiento 2.5s linear infinite;
+}
+
+.banner_img img {
+    width: 180px; /* Tamaño estándar para la imagen del pato */
+    height: auto;
+    display: block;
+}
+
+/* Contenedor del rey rata */
+#reyRataContenedor {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    text-align: center;
+    font-size: 24px; /* Aumentar el tamaño del texto de vida del rey rata */
+}
+
+/* Imagen del rey rata */
+#reyRataContenedor img {
+    width: 200px; /* Tamaño de la imagen del rey rata */
+    height: auto;
+    display: block;
+}
+
+/* Estilo para el botón tirar */
+#tirarButton {
+    border: none;
+    background-image: url("dadoboton.png");
+    background-color: transparent;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+}
+
+/* Botón de tirar con animación de rotación */
+#tirarButton.rotate {
+    animation: girar 1s ease-in-out;
+    transform: translateX(-50%); /* Mantiene la posición en el eje X */
+}
+
+@keyframes girar {
+    0% {
+        transform: translateX(-50%) rotate(0deg); /* Incluye translateX solo una vez */
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+/* Estilo para el mensaje de resultado */
+#resultado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.ganaste {
+    color: rgb(14, 243, 14);
+    background-color: rgb(65, 65, 249); /* Fondo azul para mensaje de ganaste */
+}
+
+.perdiste {
+    color: red;
+    background-color: black;
+}
+
+/* Estilo para el valor generado */
+#valorGenerado {
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+
+/* Estilo para el dado separado */
+#contenedorDado {
+    position: absolute;
+    top: 250px;
+    left: 90px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    z-index: 9; /* Para asegurarse de que el dado no se superponga con el mensaje */
+}
+
+#contenedorDado img {
+    width: 100px; /* Ajustar el tamaño de la imagen del dado */
+    height: 100px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Botón de avanzar cuando el jugador gana */
+#avanzarButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 11; /* Asegurarse que esté sobre otros elementos */
+}
+
+#avanzarButton:hover {
+    background-color: darkgreen;
+}
+
+#reintentarButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 11;
+}
+
+#reintentarButton:hover {
+    background-color: rgb(200, 0, 0);
+}
+
+/* Animación de la imagen del pato */
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

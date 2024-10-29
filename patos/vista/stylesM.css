@@ -1,0 +1,72 @@
+/* General reset and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #228B22; /* Verde de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #FFD700; /* Amarillo para el texto */
+    position: relative; /* Para posicionar elementos con respecto al body */
+}
+
+/* Posiciona el contenedor de información del usuario en la esquina superior izquierda */
+.user-info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* Estilo para los textos del usuario y correo */
+.user-info p {
+    color: #FFD700; /* Color amarillo */
+    margin-bottom: 5px;
+}
+
+/* Estilos del título */
+h1 {
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-size: 2.5rem;
+    color: #FFD700; /* Amarillo para el título */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Espaciado para los formularios (botones) */
+form {
+    margin-bottom: 15px; /* Espacio entre los botones */
+}
+
+/* Estilo de los botones */
+button {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: #FFD700; /* Amarillo para los botones */
+    color: #000; /* Texto negro para contraste */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en los botones */
+button:hover {
+    background-color: #FFC300; /* Un tono más oscuro de amarillo al hacer hover */
+}
